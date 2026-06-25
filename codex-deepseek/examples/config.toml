@@ -1,0 +1,15 @@
+# Codex + DeepSeek 配置示例
+# 复制到 ~/.codex/config.toml
+
+personality = "pragmatic"
+model = "deepseek-v4-pro"
+model_provider = "deepseek_proxy"
+model_context_window = 131072
+model_catalog_json = "~/.codex/deepseek-models.json"
+
+[model_providers.deepseek_proxy]
+name = "DeepSeek (via proxy)"
+base_url = "http://127.0.0.1:8080/v1"
+wire_api = "responses"
+supports_websockets = false
+env_key = "DEEPSEEK_API_KEY"

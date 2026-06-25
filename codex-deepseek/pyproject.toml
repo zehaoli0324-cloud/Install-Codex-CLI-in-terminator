@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "codex-deepseek"
+version = "1.0.0"
+description = "让 Codex CLI 使用 DeepSeek 模型 (协议翻译代理)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "codex-deepseek contributors"},
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+]
+keywords = ["codex", "deepseek", "openai", "llm", "proxy"]
+
+[project.scripts]
+codex-deepseek = "codex_deepseek.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["codex_deepseek*"]
